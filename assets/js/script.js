@@ -6,6 +6,23 @@ import { displayQuestion } from './questions.js';
 const allQuestions = [...htmlQuestions, ...cssQuestions, ...jsQuestions];
 
 document.addEventListener('DOMContentLoaded', function () {
+    var startButton = document.getElementById('start');
+    var userNameForm = document.getElementById('user-name-form');
+  
+    userNameForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+  
+      // Store the user's name
+      var userName = document.getElementById('user-name').value;
+      console.log("User's name: " + userName);
+  
+      // Hide the form and show the start button
+      userNameForm.classList.add('hide');
+      startButton.classList.remove('hide');
+    });
+  });
+
+document.addEventListener('DOMContentLoaded', function () {
     // Get the start button and questions div
     var startButton = document.getElementById('start');
     var questionsDiv = document.getElementById('questions');

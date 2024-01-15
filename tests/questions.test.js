@@ -1,11 +1,11 @@
-import { html_questions } from '../assets/js/html-questions';
-import { js_questions } from '../assets/js/js-questions';
-import { css_questions } from '../assets/js/css-questions';
+import { htmlQuestions } from '../assets/js/html-questions';
+import { jsQuestions } from '../assets/js/js-questions';
+import { cssQuestions } from '../assets/js/css-questions';
 
 describe('question tests', () => {
     test("Check html answer", () => {
         // Given question 
-        const question = html_questions[0];
+        const question = htmlQuestions[0];
 
         // When get answer
         const correctAnswer = question.correctAnswer;
@@ -16,7 +16,7 @@ describe('question tests', () => {
 
     test("Check js answer", () => {
         // Given question 
-        const question = js_questions[0];
+        const question = jsQuestions[0];
 
         // When get answer
         const correctAnswer = question.correctAnswer;
@@ -27,7 +27,7 @@ describe('question tests', () => {
 
     test("Check css answer", () => {
         // Given question 
-        const question = css_questions[0];
+        const question = cssQuestions[0];
 
         // When get answer
         const correctAnswer = question.correctAnswer;

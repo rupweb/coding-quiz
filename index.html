@@ -22,7 +22,14 @@
           Try to answer within the time limit. Keep in mind that incorrect answers 
           will penalize your score/time by ten seconds!
         </p>
-        <button id="start">Start Quiz</button>
+
+        <form id="user-name-form">
+          <label for="user-name">Please enter your name:</label>
+          <input type="text" id="user-name" name="user-name" required>
+          <button type="submit" class="btn btn-primary">Submit Name</button>
+        </form>
+
+        <button id="start" class="hide">Start Quiz</button>
       </div>
 
       <div id="questions" class="hide">
