@@ -34,6 +34,7 @@ function getScore() {
 }
 
 function resetCurrentScore() {
+    currentScore = 0;
     localStorage.removeItem('currentQuizScore');
 }
 

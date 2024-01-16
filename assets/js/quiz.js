@@ -55,9 +55,14 @@ function readyContinueButton() {
 function restartQuiz() {
     console.log("Restarting quiz");
 
+    // Reset the quiz state
+    currentQuestionIndex = 0;
+    resetCurrentScore();
+
+    // Reset the UI to the initial state
+    document.getElementById('start-screen').classList.remove('hide');
     document.getElementById('start').classList.remove('hide');
     document.getElementById('questions').classList.add('hide');
-
     document.getElementById('end-screen').classList.add('hide');
     document.getElementById('next-quiz').classList.add('hide');
 }
