@@ -3,6 +3,7 @@ import { cssQuestions } from './css-questions.js';
 import { jsQuestions } from './js-questions.js';
 import { displayQuestion } from './questions.js';
 import { getCurrentScore, resetCurrentScore, saveHighScores } from './scores.js';
+import { startTimer, resetTimer } from './timer.js';
 
 const allQuestions = [...htmlQuestions, ...cssQuestions, ...jsQuestions];
 
@@ -14,6 +15,14 @@ function startQuiz() {
     showForm();
     showQuiz();
     readyContinueButton();
+}
+
+function startQuizTimer() {
+    // Start 120 second timer with callback
+    startTimer(120, () => {
+        console.log('Timer finished!');
+        endQuiz();
+        });
 }
 
 function showForm() {
@@ -30,6 +39,7 @@ function showForm() {
         // Hide the form and show the start button
         userNameForm.classList.add('hide');
         startButton.classList.remove('hide');
+        startQuizTimer();
     });
 }
 
@@ -65,6 +75,11 @@ function restartQuiz() {
     document.getElementById('questions').classList.add('hide');
     document.getElementById('end-screen').classList.add('hide');
     document.getElementById('next-quiz').classList.add('hide');
+
+    // Restart the user name form
+    var userNameForm = document.getElementById('user-name-form');
+    document.getElementById('user-name').value = ''; // Clear previous name
+    userNameForm.classList.remove('hide');
 }
 
 let currentQuestionIndex = 0;

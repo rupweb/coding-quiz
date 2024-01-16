@@ -46,6 +46,8 @@ function saveHighScores() {
     let highScores = localStorage.getItem('highScores');
     console.log("Highscores: " + highScores);
 
+    // TODO: Check whether the current score is a new highscore or not
+
     if (highScores == '{}') {
         localStorage.setItem('highScores', localStorage.getItem('currentQuizScore'));
     }

@@ -7,6 +7,7 @@ function startTimer(duration, callback) {
         remainingTime--;
 
         console.log(`Time left: ${remainingTime} second(s)`);
+        document.getElementById('time').textContent = remainingTime;
 
         if (remainingTime <= 0) {
             clearInterval(timerInterval);
@@ -20,4 +21,8 @@ function isTimerCompleted() {
     return timerCompleted;
 }
 
-export { startTimer, isTimerCompleted };
+function resetTimer() {
+    timerCompleted = false;
+}
+
+export { startTimer, isTimerCompleted, resetTimer };

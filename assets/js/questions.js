@@ -31,6 +31,8 @@ function checkAnswer(selectedChoiceKey, correctAnswerKey) {
         answer.textContent = "Incorrect!";
         answer.style.color = 'red';
         updateScore(userName, false);
+
+        // TODO: Time penalty
     }
 
     // Display next question
