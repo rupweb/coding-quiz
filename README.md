@@ -1,5 +1,8 @@
 # coding-quiz
 
+### Page location
+See http://rupweb.github.io/coding-quiz/ 
+
 ## How to run Jest tests in command line
 
 1. In bash shell navigate to coding-quiz root directory
