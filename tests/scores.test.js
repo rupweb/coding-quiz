@@ -13,7 +13,7 @@ describe('Json tests', () => {
         expect(mergedJson).toBe('{"test1":10,"test2":40}');
     });
 
-    test("Handle empty ojbect", () => {
+    test("Handle empty object", () => {
         // Given json
         var json1 = '{}';
         var json2 = '{"test2": 40}';

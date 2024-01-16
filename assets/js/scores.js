@@ -29,21 +29,23 @@ function getCurrentScore() {
     return currentScore;
 }
 
+function getScore() {
+    return localStorage.getItem('currentQuizScore');
+}
+
 function resetCurrentScore() {
     localStorage.removeItem('currentQuizScore');
 }
 
 // Highscores part
 function saveHighScores() {
-    let finalScore = getCurrentScore();
-
+    let finalScore = getScore();
     console.log("Saving score " + finalScore);
 
     let highScores = localStorage.getItem('highScores');
-    console.log(highScores);
+    console.log("Highscores: " + highScores);
 
     if (highScores == '{}') {
-        console.log("New highscores")
         localStorage.setItem('highScores', localStorage.getItem('currentQuizScore'));
     }
     else {
@@ -52,11 +54,15 @@ function saveHighScores() {
 }
 
 function mergeScores(json1, json2) {
-    let obj1 = JSON.parse(json1);
-    let obj2 = JSON.parse(json2);
+    try {
+        let obj1 = JSON.parse(json1);
+        let obj2 = JSON.parse(json2);
 
-    var mergedObj = Object.assign({}, obj1, obj2);
-    return JSON.stringify(mergedObj);
+        var mergedObj = Object.assign({}, obj1, obj2);
+        return JSON.stringify(mergedObj);
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 export { saveScore, updateScore, getCurrentScore, resetCurrentScore, saveHighScores, mergeScores };
