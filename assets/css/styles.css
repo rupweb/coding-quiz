@@ -34,6 +34,14 @@ button:hover {
   display: block;
 }
 
+#next-quiz {
+  width: 20%;
+  height: 80px;
+  border: 2px solid #5b0085;
+  padding: 10px;
+  text-align: left;
+}
+
 #start-screen {
   width: 70%;
   margin: 0 auto; /* To center within the wrapper */

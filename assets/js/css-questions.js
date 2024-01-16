@@ -3,9 +3,9 @@ const cssQuestions = [
         question: "1. Explain the box model in CSS and its components",
         choices: {
             a: "The box model in CSS defines the model for creating 3D boxes and shapes. It includes properties for specifying depth, shadows, and textures",
-            a: "The box model in CSS defines how elements are displayed as rectangular boxes. It includes content, padding, border, and margin",
-            a: "The box model in CSS is a model for positioning elements in a grid layout. It includes properties for rows, columns, and alignment",
-            a: "The box model in CSS is an outdated concept and is no longer relevant in modern web development"
+            b: "The box model in CSS defines how elements are displayed as rectangular boxes. It includes content, padding, border, and margin",
+            c: "The box model in CSS is a model for positioning elements in a grid layout. It includes properties for rows, columns, and alignment",
+            d: "The box model in CSS is an outdated concept and is no longer relevant in modern web development"
         },
         correctAnswer: "b"
     },

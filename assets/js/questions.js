@@ -1,5 +1,5 @@
-import { displayNextQuestion } from './script.js';
-import { saveScore, getScores, updateScore, endQuiz } from './scores.js';
+import { displayNextQuestion } from './quiz.js';
+import { updateScore } from './scores.js';
 import { userName } from './users.js';
 
 function displayQuestion(questionObj) {
@@ -30,7 +30,7 @@ function checkAnswer(selectedChoiceKey, correctAnswerKey) {
     } else {
         answer.textContent = "Incorrect!";
         answer.style.color = 'red';
-        updateScore(false);
+        updateScore(userName, false);
     }
 
     // Display next question
